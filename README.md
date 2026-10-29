@@ -58,9 +58,9 @@ The table below lists leading commercial indirect tax and sales tax compliance s
 
 ## ⚙️ Open-Source GitHub Projects
 
-Open-source sales tax engines offer privacy, offline evaluation, zero per-transaction fees, and deterministic calculation logic. The repositories below are sorted by **GitHub Stars in descending order**:
+Open-source sales tax engines offer privacy, offline evaluation, zero per-transaction fees, and deterministic calculation logic. The repositories below are sorted by **GitHub_Stars in descending order**:
 
-| 📦 Repository & Project | ⭐ GitHub Stars | 💻 Primary Language | 🎯 Key Architecture & Focus |
+| 📦 Repository & Project | ⭐ GitHub_Stars | 💻 Primary Language | 🎯 Key Architecture & Focus |
 | :--- | :--- | :--- | :--- |
 | **[node-sales-tax](https://github.com/valeriansaliou/node-sales-tax)** | [![Stars](https://img.shields.io/github/stars/valeriansaliou/node-sales-tax?style=social&color=white)](https://github.com/valeriansaliou/node-sales-tax/stargazers) | TypeScript / Node.js | International sales tax calculator that runs completely offline with bundled rates; includes live VIES online VAT fraud validation. |
 | **[Automattic woocommerce-services](https://github.com/Automattic/woocommerce-services)** | [![Stars](https://img.shields.io/github/stars/Automattic/woocommerce-services?style=social&color=white)](https://github.com/Automattic/woocommerce-services/stargazers) | PHP / JavaScript | Automated sales tax determination and shipping rate computation plugin maintained by the WooCommerce / Automattic core team. |
