@@ -23,6 +23,8 @@
 - [⚙️ Open-Source GitHub Projects](#️-open-source-github-projects)
 - [🧩 Architectural Comparison & Implementation Nuances](#-architectural-comparison--implementation-nuances)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [⭐ Star History](#-star-history)
 - [⚖️ Disclaimer](#️-disclaimer)
 
 ---
@@ -113,6 +115,25 @@ We welcome additions, corrections, and updates from the open-source and tax engi
 2. ✍️ Add your SaaS tool or open-source repository to `README.md` following the table schema.
 3. ⭐ Ensure open-source projects include their official GitHub repository URL and accurate descriptions.
 4. 📬 Submit a Pull Request with a clear, concise summary of the addition.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you so much for exploring and using this curated sales tax compliance guide! 🙏
+
+If you find this repository valuable for your projects, business, or research, please consider supporting the project:
+- ⭐ **Star this repository** to help others discover it
+- 🍴 **Fork and contribute** updates or new tools
+- 📢 **Share it** with fellow developers, finance teams, and e-commerce entrepreneurs
+- ☕ **Buy me a coffee / Sponsor the project**: Support ongoing maintenance via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007)
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%99%A5-ea4aaa?style=for-the-badge&logo=github)](https://github.com/sponsors/ishandutta2007)
+
+---
+
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Sales-Tax-Compliance&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Sales-Tax-Compliance&type=date&legend=top-left)
 
 ---
 
