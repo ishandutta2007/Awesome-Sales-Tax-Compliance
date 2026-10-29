@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="45%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1145" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Emerald Glow -->
+    <linearGradient id="taxGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Flow Line Gradient -->
+    <linearGradient id="streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Filter for soft glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+    .code-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      fill: #38bdf8;
+    }
+
+    /* Keyframe Animations */
+    @keyframes floatPill1 {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
+    }
+    @keyframes floatPill2 {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(-1.5deg); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.75; transform: scale(1.08); }
+    }
+    @keyframes dashStream {
+      0% { stroke-dashoffset: 600; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes flowNodes {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(18px); }
+      100% { transform: translateX(0); }
+    }
+
+    .anim-pill1 { animation: floatPill1 6s ease-in-out infinite; }
+    .anim-pill2 { animation: floatPill2 7s ease-in-out infinite; }
+    .anim-glow { animation: pulseGlow 5s ease-in-out infinite; transform-origin: 960px 180px; }
+    .anim-dash {
+      stroke-dasharray: 12, 12;
+      animation: dashStream 14s linear infinite;
+    }
+    .anim-flow { animation: flowNodes 8s ease-in-out infinite; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Grid Pattern in Background -->
+  <g opacity="0.12">
+    <path d="M 0 60 H 1200 M 0 120 H 1200 M 0 180 H 1200 M 0 240 H 1200 M 0 300 H 1200" stroke="#94a3b8" stroke-width="1" />
+    <path d="M 120 0 V 360 M 240 0 V 360 M 360 0 V 360 M 480 0 V 360 M 600 0 V 360 M 720 0 V 360 M 840 0 V 360 M 960 0 V 360 M 1080 0 V 360" stroke="#94a3b8" stroke-width="1" />
+  </g>
+
+  <!-- Animated Ambient Glow Blobs in Background (Never hides foreground) -->
+  <circle cx="1000" cy="170" r="140" fill="#6366f1" filter="url(#glow)" class="anim-glow" opacity="0.3" />
+  <circle cx="820" cy="230" r="90" fill="#06b6d4" filter="url(#glow)" class="anim-glow" opacity="0.25" />
+  <circle cx="180" cy="80" r="100" fill="#a855f7" filter="url(#glow)" opacity="0.15" />
+
+  <!-- Dynamic Curved Data / Nexus Flow Lines (Background Layer) -->
+  <g fill="none">
+    <path d="M 680,290 C 800,290 850,210 980,210 C 1070,210 1120,150 1190,150" stroke="url(#streamGrad)" stroke-width="3" class="anim-dash" />
+    <path d="M 620,110 C 740,110 820,180 940,180 C 1030,180 1110,90 1200,90" stroke="url(#primaryGrad)" stroke-width="2" opacity="0.4" stroke-dasharray="6, 6" />
+  </g>
+
+  <!-- Dynamic Moving Graphic Cards (Offset to the right side, so Title stays crystal clear in Foreground) -->
+  <g class="anim-flow">
+    <!-- Dynamic Card: Real-time Calculation -->
+    <g transform="translate(860, 50)" class="anim-pill1">
+      <rect width="260" height="74" rx="14" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+      <circle cx="36" cy="37" r="16" fill="#10b981" fill-opacity="0.2" />
+      <text x="36" y="42" font-family="-apple-system, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">✓</text>
+      <text x="68" y="32" class="badge-text">Real-time Determination</text>
+      <text x="68" y="52" class="code-text">tax: 8.875% • NYC District</text>
+    </g>
+
+    <!-- Dynamic Card: Economic Nexus Engine -->
+    <g transform="translate(820, 145)" class="anim-pill2">
+      <rect width="280" height="78" rx="14" fill="#0f172a" fill-opacity="0.88" stroke="#6366f1" stroke-width="1.5" />
+      <circle cx="38" cy="39" r="16" fill="#6366f1" fill-opacity="0.2" />
+      <text x="38" y="44" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold" fill="#818cf8" text-anchor="middle">⚡</text>
+      <text x="70" y="33" class="badge-text">Economic Nexus Tracker</text>
+      <text x="70" y="54" class="code-text">$100k / 200 tx threshold met</text>
+    </g>
+
+    <!-- Dynamic Card: Global VAT/GST & E-Invoicing -->
+    <g transform="translate(870, 245)" class="anim-pill1">
+      <rect width="250" height="72" rx="14" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="1.5" />
+      <circle cx="34" cy="36" r="16" fill="#38bdf8" fill-opacity="0.2" />
+      <text x="34" y="41" font-family="-apple-system, sans-serif" font-size="15" font-weight="bold" fill="#38bdf8" text-anchor="middle">🌐</text>
+      <text x="64" y="32" class="badge-text">Global VAT &amp; GST</text>
+      <text x="64" y="52" class="code-text">Art. 58 B2B Reverse Charge</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND LAYER: Title, Subtitle, and Status Indicators -->
+  <g transform="translate(75, 0)">
+    <!-- Top Decorative Category Tag -->
+    <g transform="translate(0, 58)">
+      <rect width="280" height="30" rx="15" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+      <circle cx="16" cy="15" r="5" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="30" y="20" class="badge-text" fill="#93c5fd" font-size="12">CURATED ECOSYSTEM DIRECTORY</text>
+    </g>
+
+    <!-- Main Heading (Always in foreground, never obscured) -->
+    <text x="0" y="145" class="title">
+      Awesome <tspan fill="url(#primaryGrad)">Sales Tax Compliance</tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="186" class="subtitle">
+      Enterprise SaaS Platforms, Automated Nexus Engines &amp; Open-Source Tax Software
+    </text>
+
+    <!-- Feature Pills / Highlights Row -->
+    <g transform="translate(0, 226)">
+      <!-- Pill 1 -->
+      <g>
+        <rect width="165" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="23" font-size="13" class="badge-text" fill="#cbd5e1">🏛️ 11,000+ US Jurisdictions</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(177, 0)">
+        <rect width="150" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="23" font-size="13" class="badge-text" fill="#cbd5e1">🌍 Global VAT &amp; GST</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(339, 0)">
+        <rect width="180" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="23" font-size="13" class="badge-text" fill="#cbd5e1">⚙️ Open-Source Engines</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(531, 0)">
+        <rect width="145" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="23" font-size="13" class="badge-text" fill="#cbd5e1">📑 Auto-Filing APIs</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metadata Line -->
+    <g transform="translate(0, 296)">
+      <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="12" fill="#64748b" font-weight="500">
+        Continuous Transaction Controls (CTC) • Post-Wayfair Compliance • Rooftop Precision • Automated Remittance
+      </text>
+    </g>
+  </g>
+</svg>
